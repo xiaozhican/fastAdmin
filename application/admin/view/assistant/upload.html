@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="__CDN__/assets/js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="__CDN__/assets/js/jquery.cityselect.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>不带拖放区域：</h3>
+                <input type="file" multiple id="ssi-upload"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+            <div id="city">
+                <select class="prov"></select>
+                <select class="city" disabled="disabled"></select>
+                <select class="dist" disabled="disabled"></select>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        $("#city").citySelect({
+            url:"__CDN__/assets/js/city.min.js",
+            prov:"湖南", //省份
+            city:"长沙", //城市
+            dist:"岳麓区", //区县
+            nodata:"none" //当子集无数据时，隐藏select
+        });
+    });
+</script>
+</body>
+</html>
